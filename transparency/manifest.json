@@ -1,0 +1,16 @@
+{
+  "name": "Transparency",
+  "2D": false,
+  "3D": true,
+  "platform": "HTML3D",
+  "version": "1.0.0",
+  "wabVersion": "2.9",
+  "author": "Marc Le Moigne",
+  "description": "A custom Web AppBuilder widget.",
+  "copyright": "",
+  "license": "ISC",
+  "properties": {
+    "inPanel": true,
+    "hasUIFile": true
+  }
+}
