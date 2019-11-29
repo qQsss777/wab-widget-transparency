@@ -11,11 +11,6 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', 'dijit/_WidgetsInTemplateMixin'
       console.log('transparency::postCreate');
     },
     _init: function _init() {
-      var panel = this.getPanel();
-      panel.position.width = 350;
-      panel.position.height = 150;
-      panel.setPosition(panel.position);
-      panel.panelManager.normalizePanel(panel);
 
       this.map = this.sceneView.map;
       this.map.ground.navigationConstraint = {
@@ -26,6 +21,13 @@ define(['dojo/_base/declare', 'jimu/BaseWidget', 'dijit/_WidgetsInTemplateMixin'
     },
     _onSliderValueChanged: function _onSliderValueChanged() {
       this.sceneView.map.ground.opacity = this.value - this.slider.value;
+    },
+    onOpen: function onOpen() {
+      var panel = this.getPanel();
+      panel.position.width = 350;
+      panel.position.height = 150;
+      panel.setPosition(panel.position);
+      panel.panelManager.normalizePanel(panel);
     }
   });
 });
